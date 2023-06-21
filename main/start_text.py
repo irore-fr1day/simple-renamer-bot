@@ -7,7 +7,7 @@ from config import ADMIN
 async def start_cmd(bot, msg):
     txt="Это приватный бот 🙏. Хотите получить доступ? 👇 Кликните 'Получить доступ'!"
     btn = InlineKeyboardMarkup([[
-        InlineKeyboardButton("🤖 SUBSCRIBE", url="https://github.com/MrMKN/Simple-Rename-Bot")
+        InlineKeyboardButton("🤖 Буду рад за подписку", url="https://t.me/ipa_fire_ios_uz")
         ],[
         InlineKeyboardButton("🖥️ Получить доступ", url="https://t.me/fr1day_pon")
     ]])
