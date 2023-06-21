@@ -31,6 +31,5 @@ view - view current thumbnail
 
 ## Support
 
-● [BOT UPDATES](https://t.me/mkn_bots_updates)
+● [BOT UPDATES](https://t.me/fr1day_pon)
 
-● [SUPPORT GROUP](https://t.me/mkn_botz_discussion_group)
