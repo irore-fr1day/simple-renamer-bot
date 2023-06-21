@@ -31,5 +31,5 @@ view - view current thumbnail
 
 ## Support
 
-● [BOT UPDATES](https://t.me/fr1day_pon)
+● [SUPPORT](https://t.me/fr1day_pon)
 
