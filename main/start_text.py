@@ -11,7 +11,7 @@ async def start_cmd(bot, msg):
         ],[
         InlineKeyboardButton("🖥️ Получить доступ", url="https://t.me/fr1day_pon")
     ]])
-    if msg.from_user.id != ADMIN, ACCESS:
+    if msg.from_user.id != ADMIN and ACCESS:
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
