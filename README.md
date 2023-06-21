@@ -1,0 +1,1 @@
+# simple-renamer-bot
