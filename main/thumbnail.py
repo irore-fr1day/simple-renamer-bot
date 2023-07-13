@@ -18,15 +18,7 @@ async def set_tumb(bot, msg):
     print(f"{msg.from_user.id} сохраняет свою миниатюру!")
     if msg.from_user.id != ADMIN:
         if msg.from_user.id != ACCESS:
-            return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
-        else:
-            #thumbnail
-            if len(dir) == 0:
-                await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")
-                return await msg.reply(f"Ваша постоянная миниатюра сохранена ✅️ \nЕсли вы измените свой сервер или заново создадите серверное приложение, миниатюра сбросится⚠️")            
-            else:    
-                await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")               
-                return await msg.reply(f"Ваша постоянная миниатюра сохранена ✅️ \nЕсли вы измените свой сервер или заново создадите серверное приложение, миниатюра сбросится⚠️")            
+            return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)          
     else:
             #thumbnail
             if len(dir) == 0:
