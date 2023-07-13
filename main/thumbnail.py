@@ -42,14 +42,6 @@ async def view_tumb(bot, msg):
     if msg.from_user.id != ADMIN:
         if msg.from_user.id != ACCESS:
             return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
-        
-        else:
-            #thumbnail
-            try:
-                await msg.reply_photo(photo=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg", caption="Эта ваша миниатюра.")
-            except Exception as e:
-                print(e)
-                return await msg.reply_text(text="У вас нет сохранённой миниатюры!")
     else:
             #thumbnail
             try:
@@ -71,15 +63,6 @@ async def del_tumb(bot, msg):
     if msg.from_user.id != ADMIN:
         if msg.from_user.id != ACCESS:
             return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
-        
-        else:
-            #thumbnail
-            try:
-                os.remove(f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")
-                await msg.reply_text("Ваша миниатюра удалена🚫")
-            except Exception as e:
-                print(e)
-                return await msg.reply_text(text="У вас нет сохранённой миниатюры!")
     else:
             #thumbnail
             try:
