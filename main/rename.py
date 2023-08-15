@@ -1,7 +1,7 @@
 import time, os
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram import Client, filters, enums
-from config import DOWNLOAD_LOCATION, CAPTION, ADMIN, ACCESS
+from config import DOWNLOAD_LOCATION, CAPTION, ADMIN
 from main.utils import progress_message, humanbytes
 
 @Client.on_message(filters.command("rename"))             
