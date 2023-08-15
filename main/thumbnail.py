@@ -1,6 +1,6 @@
 from pyrogram import Client, filters , enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
-from config import ADMIN, DOWNLOAD_LOCATION, ACCESS
+from config import ADMIN, DOWNLOAD_LOCATION
 import os
 
 dir = os.listdir(DOWNLOAD_LOCATION)
