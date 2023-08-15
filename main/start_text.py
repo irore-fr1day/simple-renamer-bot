@@ -1,6 +1,6 @@
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
-from config import ADMIN, ACCESS, DOWNLOAD_LOCATION
+from config import ADMIN, DOWNLOAD_LOCATION
 import os
 import datetime
 from aiogram.types import message, user
