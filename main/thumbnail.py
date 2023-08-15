@@ -17,16 +17,13 @@ async def set_tumb(bot, msg):
     ]])   
     print(f"{msg.from_user.id} сохраняет свою миниатюру!")
     if msg.from_user.id != ADMIN:
-        if msg.from_user.id != ACCESS:
-            return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)          
+        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)          
     else:
-            #thumbnail
-            if len(dir) == 0:
-                await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")
-                return await msg.reply(f"Ваша постоянная миниатюра сохранена ✅️ \nЕсли вы измените свой сервер или заново создадите серверное приложение, миниатюра сбросится⚠️")            
-            else:    
-                await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")               
-                return await msg.reply(f"Ваша постоянная миниатюра сохранена ✅️ \nЕсли вы измените свой сервер или заново создадите серверное приложение, миниатюра сбросится⚠️")            
+        #thumbnail
+        if len(dir) == 0:
+            await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")
+            return await msg.reply(f"Ваша постоянная миниатюра сохранена ✅️ \nЕсли вы измените свой сервер или заново создадите серверное приложение, миниатюра сбросится⚠️")            
+               
 
 
 @Client.on_message(filters.private & filters.command("view"))                            
@@ -40,15 +37,14 @@ async def view_tumb(bot, msg):
     ]])   
     print(f"{msg.from_user.id} Просматривает свою миниатюру!")
     if msg.from_user.id != ADMIN:
-        if msg.from_user.id != ACCESS:
-            return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
+        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     else:
-            #thumbnail
-            try:
-                await msg.reply_photo(photo=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg", caption="Эта ваша миниатюра.")
-            except Exception as e:
-                print(e)
-                return await msg.reply_text(text="У вас нет сохранённой миниатюры!")
+        #thumbnail
+        try:
+            await msg.reply_photo(photo=f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg", caption="Эта ваша миниатюра.")
+        except Exception as e:
+            print(e)
+            return await msg.reply_text(text="У вас нет сохранённой миниатюры!")
 
 @Client.on_message(filters.private & filters.command(["del", "del_thumb"]))                            
 async def del_tumb(bot, msg):
@@ -61,13 +57,12 @@ async def del_tumb(bot, msg):
     ]])   
     print(f"{msg.from_user.id} удаляет свою миниатюру!")
     if msg.from_user.id != ADMIN:
-        if msg.from_user.id != ACCESS:
-            return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
+        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     else:
-            #thumbnail
-            try:
-                os.remove(f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")
-                await msg.reply_text("Ваша миниатюра удалена🚫")
-            except Exception as e:
-                print(e)
-                return await msg.reply_text(text="У вас нет сохранённой миниатюры!")
+        #thumbnail
+        try:
+            os.remove(f"{DOWNLOAD_LOCATION}/{msg.from_user.id}/thumbnail.jpg")
+            await msg.reply_text("Ваша миниатюра удалена🚫")
+        except Exception as e:
+            print(e)
+            return await msg.reply_text(text="У вас нет сохранённой миниатюры!")
