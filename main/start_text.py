@@ -18,8 +18,7 @@ async def start_cmd(bot, msg):
     print(f"{msg.from_user.id} начал использовать бот!")
     if msg.from_user.id != ADMIN:
         print("Пользователь не является админом!")
-        if msg.from_user.id != ACCESS:
-            return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
+        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     
     test_path = (f"{DOWNLOAD_LOCATION}/{msg.from_user.id}")
     user = (msg.from_user.id)
