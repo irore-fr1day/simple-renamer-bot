@@ -11,7 +11,7 @@ from aiogram import types
 async def start_cmd(bot, msg):
     txt="Это приватный бот 🙏. Хотите получить доступ? 👇 Кликните 'Получить доступ'!"
     btn = InlineKeyboardMarkup([[
-        InlineKeyboardButton("🤖 SUBSCRIBE", url="https://github.com/irore-fr1day/simple-renamer-bot")
+        InlineKeyboardButton("🤖 SUBSCRIBE", url="https://t.me/ipa_fire_ios_uz")
         ],[
         InlineKeyboardButton("🖥️ Получить доступ", url="https://t.me/fr1day_pon")
     ]])
